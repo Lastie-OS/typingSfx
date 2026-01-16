@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Files</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #ff69b4;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            padding: 12px;
+            background-color: #2a2a2a;
+            border-left: 4px solid #ff69b4;
+            border-radius: 4px;
+        }
+        
+        a {
+            color: #ff69b4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: #c0a0d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Files</h1>
+        <ul id="fileList"></ul>
+    </div>
+
+    <script>
+        // Replace with actual .wav file names in your folder
+        const wavFiles = [
+            'Backspace.wav',
+            'Del.wav',
+            'Key.wav',
+            'Space.wav',
+            'Backspace2.wav',
+            'Del2.wav',
+            'Key2.wav',
+            'Space2.wav',
+            'Ding.wav',
+            'Bing.wav'
+        ];
+        
+        const fileList = document.getElementById('fileList');
+        wavFiles.forEach(file => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="./${file}" download>${file}</a>`;
+            fileList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
